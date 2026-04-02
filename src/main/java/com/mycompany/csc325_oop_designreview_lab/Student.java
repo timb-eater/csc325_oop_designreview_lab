@@ -9,9 +9,7 @@ package com.mycompany.csc325_oop_designreview_lab;
  * @author MoaathAlrajab
  */
 public class Student extends Human{
-    private String name;
     private String address;
-    private short age;
     private int credits;
     private double gpa;
 
@@ -22,26 +20,6 @@ public class Student extends Human{
     public Student(String name, short age, int credits) {
         super(name, age); //recommended by intellij
         this.credits = credits;
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public short getAge() {
-        return age;
-    }
-
-    @Override
-    public void setAge(short age) {
-        this.age = age;
     }
 
     @Override
@@ -68,5 +46,16 @@ public class Student extends Human{
 
     public void setGpa(double gpa){
         this.gpa = gpa;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + getName() + '\'' +
+                ", address='" + address + '\'' +
+                ", age=" + getAge() +
+                ", credits=" + credits +
+                ", gpa=" + gpa +
+                '}';
     }
 }
