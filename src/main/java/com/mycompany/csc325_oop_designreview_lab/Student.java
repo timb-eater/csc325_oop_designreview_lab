@@ -13,13 +13,14 @@ public class Student extends Human{
     private String address;
     private short age;
     private int credits;
+    private double gpa;
 
     public Student(String name, short age){
-        super(name, age);
+        super(name, age); //recommended by intellij
     }
 
     public Student(String name, short age, int credits) {
-        super(name, age);
+        super(name, age); //recommended by intellij
         this.credits = credits;
     }
 
@@ -43,14 +44,6 @@ public class Student extends Human{
         this.age = age;
     }
 
-    public int getCredits() {
-        return credits;
-    }
-
-    public void setCredits(int credits) {
-        this.credits = credits;
-    }
-
     @Override
     public String getAddress() {
         return this.address;
@@ -60,11 +53,20 @@ public class Student extends Human{
     public void setAddress(String address) {
         this.address = address;
     }
-    // ToDo 1: Make this class a child of Human
 
-	// ToDo 2: Fix the resulting errors
+    public int getCredits() {
+        return credits;
+    }
 
-	// ToDo 3: Add a field for GPA and create a setter and a getter
-	
-	// ToDo 4: Add comments to your code
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
+
+    public double getGpa(){
+        return this.gpa;
+    }
+
+    public void setGpa(double gpa){
+        this.gpa = gpa;
+    }
 }
